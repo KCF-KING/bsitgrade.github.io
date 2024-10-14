@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading System</title>
+    <link rel="stylesheet" href="grades.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BSIT 1B Grading System</h1>
+        <div class="login">
+            <label for="username">Enter Your Name:</label>
+            <input type="text" id="username" required>
+            <label for="password">Enter Your Password:</label>
+            <input type="password" id="password" required>
+            <button onclick="login()">Login</button>
+            <p id="login-message" class="error-message"></p>
+        </div>
+
+        <div class="grades-input" style="display:none;">
+            <h2>Enter Your Grades:</h2>
+            <label for="cc101">CC101:</label>
+            <input type="number" id="cc101" required>
+            <label for="cc102">CC102:</label>
+            <input type="number" id="cc102" required>
+            <label for="cc103">CC103:</label>
+            <input type="number" id="cc103" required>
+            <label for="nstp">NSTP:</label>
+            <input type="number" id="nstp" required>
+            <label for="ge101">GE101:</label>
+            <input type="number" id="ge101" required>
+            <label for="ge102">GE102:</label>
+            <input type="number" id="ge102" required>
+            <label for="ge103">GE103:</label>
+            <input type="number" id="ge103" required>
+            <label for="pe01">PE01:</label>
+            <input type="number" id="pe01" required>
+            <button onclick="calculateGWA()">Calculate GWA</button>
+        </div>
+
+        <div class="result" style="display:none;">
+            <h2>Your Result:</h2>
+            <p id="gwa-result"></p>
+        </div>
+    </div>
+    <script src="grades.js"></script>
+</body>
+</html>
